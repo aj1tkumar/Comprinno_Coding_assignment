@@ -1,0 +1,46 @@
+'''Question3
+  Temple Land'''
+  
+  #pseudo code
+  1.taking number of test cases
+  2. for loop for each test cases
+  3. taking number of iteams in list
+  4. taking list values
+  5. checking condition if list first element and last element is 1 and number of iteams in list is 
+    odd and every next element is increasing exactly by 1
+  6. if satisfied all condition then print "yes" else "no"
+  
+  
+  
+  #code
+  
+try:
+ #taking numer of test casesas t
+ t=int(input())
+ #for loop in range t
+ for i in range(t):
+     #for each test cases number of inputs as x
+     x=int(input())
+     #creating a list n
+     n=list(map(int,input().split()))
+     
+     print(n)
+     
+     c=1
+     #checking condition if list first element and last element is 1 and 
+     #number of iteams in list is odd
+     #and every next element is increasing exactly by 1 
+     if(n[0]==1 and n[-1]==1 and (x%2)!=0 and n.count(max(n))==1):
+         for i in range(0,x-1):
+             if(abs(n[i]-n[i+1])==1):
+                 c=c+1
+         if(x==c):
+             #if all condition satisfied then print "yes"
+              print("yes")
+         else:
+             #if any condition not satisfied then print "no"
+             print("no")
+     else:
+         print("no")
+except:
+    pass
