@@ -8,6 +8,7 @@
  4. if N is odd then A*=2
  5. if A>B then print floor division of A by B
  6. else print floor division of B by A
+ 7. Goto next test case
  
  #code
  
