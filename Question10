@@ -1,0 +1,39 @@
+''' Question <>
+Gross Salary'''
+
+# Pseudo Code
+1. Read the number of test cases
+2. For every test case:
+3. Read salary
+4. If salary is less than 1500, then HRA = salary/10, DA = (9 * salary)/10
+5. Otherwise HRA = 500, DA = (98 * salary)/100
+6. gross_salary = salary + HRA + DA
+7. Display the gross_salary
+8. Goto next test case
+
+
+# Code
+
+# Read total number of test cases
+t = int(input())
+
+# For each test case
+for _ in range(t):
+
+	# Read the salary
+    salary = int(input())
+    
+    # If salary is less than 1500
+    if salary < 1500:
+        HRA = salary/10
+        DA = (9 * salary)/10
+        gross = salary + HRA + DA
+        
+    # Otherwise
+    else:
+        HRA = 500
+        DA = (98 * salary)/100
+        gross = salary + HRA + DA
+        
+    # Print gross salary
+    print("{:.2f}".format(gross))
