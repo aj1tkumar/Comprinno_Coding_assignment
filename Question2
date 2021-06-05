@@ -1,0 +1,63 @@
+'''Question 2
+  Ordering teams'''
+  
+#Pseudo Code
+1. taking number of test cases as t
+2. for loop in range t
+3.taking skill input of each three person in different list
+4.passing list value of i-th person and i+1-th person in function g(x,y)
+5. function g(x,y) return true if person i+1-th have score more in i-th person in atleast one skill
+6.if i+1-th person  score more in atleast one skill then print "yes"
+7.if i+1-th person not score more in atleast one skill then print "no"
+
+
+
+#Code
+
+
+
+#create a function which compare list values of two person
+#it return true if person x vlue in the list of person
+#is better than person x-1
+def g(x,y):
+    
+    d = x[0]>=y[0] and x[1]>=y[1] and x[2]>=y[2]
+    e= x[0]>y[0] or x[1]>y[1] or x[2]>y[2]
+    
+    return d and e
+    
+#taking input test cases number
+t=int(input())
+#for loop for each test cases
+for _ in range(t):
+    #Enter skill values of "a" in list
+    a=list(map(int,input().split()))
+    #Enter skill values of "b" in list
+    b=list(map(int,input().split()))
+    #Enter skill values of "c" in list
+    c=list(map(int,input().split()))
+    #passing person list to function g(x,y)
+    #where x is i+1-th person and 
+    #y is i-th person
+    if g(a,b) and g(b,c):
+        #if function return true then print"yes"
+        print('yes')
+    elif g(a,c) and g(c,b):
+        #if function return true then print"yes"
+        print('yes')
+    elif g(b,a) and g(a,c):
+        #if function return true then print"yes"
+        print('yes')
+    elif g(b,c) and g(c,a):
+        #if function return true then print"yes"
+        print('yes')
+    elif g(c,a) and g(a,b):
+        #if function return true then print"yes"
+        print('yes')
+    elif g(c,b) and g(b,a):
+        #if function return true then print"yes"
+        print('yes')
+    else:
+        #if no condition satisfied then print "no" 
+        print('no')
+        
