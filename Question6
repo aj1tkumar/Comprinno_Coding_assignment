@@ -1,0 +1,44 @@
+''' Question <>
+Cats and Dogs'''
+
+# Pseudo code
+1. Read total number of testcase
+2. For each test case:
+3. Read the values of number of cats, dogs and legs
+4. If number of cats are less than two times that of dogs, minimum=d*4
+5. Else minimum=[d+(c-2*d)]*4
+6. Define maximum=(d+c)*4
+7. If number of legs are in multiple of 4 and lies in between minimum and maximum, print "yes"
+8. Else print "no"
+9. Goto next test case
+
+
+# Code
+
+
+# Read number of test cases
+t=int(input())
+
+# For every test case
+for _ in range(t):
+
+	# Read the values of number of cats, dogs and legs
+    c,d,l= [int(i) for i in input().split()]
+    
+    # If number of cats are less than two times that of dogs, minimum=d*4
+    if c<=2*d:
+        minimum=d*4
+    # Otherwise minimum=[d+(c-2*d)]*4
+    else:
+        minimum=[d+(c-2*d)]*4
+    
+    # Define maximum=(d+c)*4
+    maximum=(d+c)*4
+    
+    # If number of legs are in multiple of 4 and lies in between minimum and maximum, print "yes"
+    if (l>=minimum and l<=maximum and l%4==0):
+        print("yes")
+        
+    # Else print "no"
+    else:
+        print("no")
