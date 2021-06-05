@@ -14,6 +14,7 @@ Fibonnaci Series'''
 10.if length of list is less than 3 then print "dynamic"
 11.else if length is greater than or equal to 3 then check ,if this contion l[-1] == l[-2]+l[-3], true then print "Dynamic"
   else if false then print "Not"
+12. Goto next test case
 
 
 #Code
