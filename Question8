@@ -1,0 +1,37 @@
+'''Question 8
+  Two Numbers'''
+  
+ #Pseudo Code
+ 1. reading number of test cases
+ 2. for every test cases
+ 3. read A, B, N
+ 4. if N is odd then A*=2
+ 5. if A>B then print floor division of A by B
+ 6. else print floor division of B by A
+ 
+ #code
+ 
+ 
+ #taking input number of test cases
+T = int(input())
+#for loop for each test cases
+for t in range(T):
+    #taking value of Alice ,Bob, N turns
+    A, B, N = map(int,input().split())
+    print("__")
+    print(A)
+    print("**")
+    print(B)
+    print("**")
+    print(N)
+    print("**")
+    #if N is odd then A*=2 
+    if N % 2 == 1:
+        A *= 2
+    #if A>B then print floor division of A by B   
+    if A > B:
+        print(A // B)
+        
+    #else floor division of B by A
+    else:
+        print(B // A)
