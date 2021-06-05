@@ -1,0 +1,42 @@
+'''Question 4
+  Bear and Milky Cookies'''
+  
+#pseudo Code
+1. taking input number of test cases
+2. for loop for each test cases
+3. taking input number of task done by bear
+4. creating list of task
+5. for loop for each iteam of list, taking c = 1, if i == "cookie" increase c by 1,
+  if i != "cookie" set c = 0
+  if c==2 i.e. bear eaten two cookies continuously, break loop and print "no"
+  if after completing for loop , value of c ==0 then print "yes" else "no"
+
+
+
+#Code
+
+
+#for loop for number of test cases
+for _ in range(int(input())):
+    #taking input n minutes 
+    n = int(input())
+    #creating list of task
+    l = input().split()
+    c=0
+    #for loop for each task done by bear
+    for i in l:
+        #if i == "cookie" then increasing c value by 1
+        if i=="cookie":
+            c+=1
+        #else set value of c as 0
+        else:
+            c=0
+        #if c == 2 i.e. bear each two cookies continuously     
+        if c==2:
+            break
+    #if after performing task by bear value of c == 0  then print "yes"
+    if c==0:
+        print("YES")
+        #if c!= 0 then print "no"
+    else: 
+        print("NO")
