@@ -9,6 +9,7 @@
   5. checking condition if list first element and last element is 1 and number of iteams in list is 
     odd and every next element is increasing exactly by 1
   6. if satisfied all condition then print "yes" else "no"
+  7. Goto next test case
   
   
   
