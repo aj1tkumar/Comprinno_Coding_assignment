@@ -11,6 +11,7 @@
   if appear more than 1 time then we append its value in list m
 7. if length of list m is greater than 3 then we will sort list m and reverse its items 
 8. on multiplying first and last index value of list m, we can get maximum area of rectangle
+9. Goto next test case
 
 
 
