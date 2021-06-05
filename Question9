@@ -8,6 +8,7 @@
 3. reading number of values and reading and creating list 
 4. calculating cost, cost will be minimum value of list*(length of list-1)
 5. print cost
+6. Goto next test case
 
 
 #code
