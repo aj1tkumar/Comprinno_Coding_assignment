@@ -1,0 +1,37 @@
+'''Question 11
+  Id and Ship'''
+  
+ #Pseudo Code
+ 1. reading number of test cases
+ 2. reading input
+ 3. if input n is 'b or 'B' print "BattleShip"
+    else if n is 'c' or 'C' print "Cruiser"
+    else if n is 'd' or 'D' print "Destroyer"
+    else if n is 'f' or 'F'print "Frigate"
+ 4. Goto Next Test Case
+ 
+ #Code
+ 
+ 
+ #reading number of test cases
+t=int(input())
+#for each test cases
+for i in range(t):
+    #reading input n
+    n=input()
+    #if n is 'b' or 'B'
+    if (n=='b' or n=='B'):
+        #print "BattleShip"
+        print('BattleShip')
+    #else if n is 'c' or 'C'   
+    elif (n=='c' or n=='C'):
+        #print "Cruiser"
+        print('Cruiser')
+    #else if n is 'd' or 'D'
+    elif (n=='d' or n=='D'):
+        #print "Destroyer"
+        print('Destroyer')
+    #else if n is 'f' or 'F'
+    elif (n=='f' or n=='F'):
+        #print "Frigate"
+        print('Frigate')
