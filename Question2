@@ -9,6 +9,7 @@
 5. function g(x,y) return true if person i+1-th have score more in i-th person in atleast one skill
 6.if i+1-th person  score more in atleast one skill then print "yes"
 7.if i+1-th person not score more in atleast one skill then print "no"
+8. Goto next test case
 
 
 
