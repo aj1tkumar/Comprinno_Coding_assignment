@@ -1,0 +1,55 @@
+'''Question 1
+Fibonnaci Series'''
+
+#Pseudo Code
+1.Create For loop for each test cases
+2.Take input test string
+3.create dictionary d
+4.for loop for each character in a
+5.if character present in dictionary then increase its value by 1
+6.if character not present in dictionary then update dictionary with this character and value by 1
+7. create list "l"
+8.put all values of dictionary in list "l"
+9.Sort list
+10.if length of list is less than 3 then print "dynamic"
+11.else if length is greater than or equal to 3 then check ,if this contion l[-1] == l[-2]+l[-3], true then print "Dynamic"
+  else if false then print "Not"
+
+
+#Code
+
+
+#create "for loop" for numbers of test cases
+for _ in range(int(input())):
+    print(_)
+    #take input string
+    a=input()
+    #create dictionary
+    d={}
+    #Checking each character of input test string
+    for i in a:
+        #if character at place i in input string already present in dictionary then update its value by 1
+        if i in d:
+            d.update({i:d.get(i)+1})
+        #if character at place i is not present in dictionary then add this character in dictionary with value 1
+        else:
+            d.update({i:1})
+    
+    #create list
+    l=[]
+    #Put all the values of dictionary in key
+    for i in d.values():
+        l.append(i)
+    #sort list
+    l.sort()
+    #if length of list is less than 3 then print "Dynamic"
+    if len(l)<3:
+        print("Dynamic")
+    #if length of list is greater than or equal to 3 then 
+    else:
+        #if l[-1]==l[-2]+l[-3] then print "Dynamic"
+        if l[-1]==l[-2]+l[-3]:
+            print("Dynamic")
+        #else print "Not"
+        else:
+            print("Not")
