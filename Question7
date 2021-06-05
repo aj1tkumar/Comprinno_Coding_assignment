@@ -1,0 +1,57 @@
+'''Question 7 
+  Sticks'''
+  
+#Pseudo code
+1. taking input number of test cases
+2. for loop for each test cases
+3. taking input number of list
+4. taking all the input of list
+5. creating a list m
+6. for loop in range 0 - len(list), counting number of times i-th list element appears in list,
+  if appear more than 1 time then we append its value in list m
+7. if length of list m is greater than 3 then we will sort list m and reverse its items 
+8. on multiplying first and last index value of list m, we can get maximum area of rectangle
+
+
+
+#code
+
+
+
+
+try:
+    #taking number of test cases
+    t=int(input())
+    #for loop for each test cases
+    for i in range(t):
+        #each test contains n input
+        n=int(input())
+        #list contains input
+        l=list(map(int,input().split()))
+        
+        #creating a list m
+        m=[]
+        for i in range(0,len(l)):
+            #storing, number of times  l[i] appears, in a 
+           a=l.count(l[i])
+           #if value appears more than 1 times then we can append list m
+           if(a>1):
+                m.append(l[i])
+                
+        #rectangle can be form only when length of list will be greater than 3
+        if(len(m)>3):
+            #sort the list m
+            m.sort()
+           
+            #reverse the list
+            m.reverse()
+            
+            #multiply 0th index value of list and 3rdindex value of list for area of triangle
+            print(m[0]*m[3])
+        #if length of list if equal to or less than 3 then print "-1"
+        else:
+            print('-1')
+    
+        
+except:
+    pass
