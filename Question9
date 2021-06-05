@@ -1,0 +1,31 @@
+'''Question 9
+  Minimum Maximum'''
+  
+#Pseudo code
+
+1. Reading number of test cases
+2.for each test cases
+3. reading number of values and reading and creating list 
+4. calculating cost, cost will be minimum value of list*(length of list-1)
+5. print cost
+
+
+#code
+
+
+
+
+#Reading number of test cases
+t = int(input())
+
+while(t > 0):
+    #decreasing test value by 1
+    t -= 1 
+    #reading number of input 
+    n = int(input())
+    #reading input values and creating list
+    l = [int(x) for x in input().split()]
+    #cost will be minimum value of list*(length of list-1)
+    cost = min(l) *(len(l)-1)
+    #print cost
+    print(cost)
