@@ -1,0 +1,58 @@
+'''Question 5
+  Beautiful Arrays'''
+
+# Pseudo code
+1.Create For loop for each test cases
+2.Take input test number
+3.initialize counter to zero
+4.create dictionary d
+5.if given number is not in dictionary, increment counter c
+6.else, given number is in dictionary, increment dictionary count
+7.if counter c is more than 1, print 'no' and move to next test case
+8.else check if counter is 1 and dictionary[-1] is also 1, print 'no'
+9.else if dictionary[-1] is greater than 1 and dictionary[1] is zero, print 'no'
+10.otherwise print 'yes'
+11.goto next test case
+
+
+
+# Code
+
+
+# For every test case
+for _ in range(int(input())):
+
+    # read input number
+    n=int(input())
+    
+    # initialize counter to zero
+    c=0
+    
+    # create dictionary
+    d={0:0,1:0,-1:0}
+    
+    # for every integer x
+    for x in map(int,input().split()):
+    
+        # if x is not in dictionary then increment counter
+        if x not in d:
+            c+=1
+        # if x is in dictionary then increment dictionary count
+        else:
+            d[x]+=1
+        
+        # if counter increases above 1 then print 'no' and move to next test case
+        if c>1:
+            print('no')
+            break
+	    # otherwise check
+	    else:
+	    	# if counter is 1 and dictionary[-1] is also 1, print 'no'
+	        if c and d[-1]:
+	            print('no')
+	        # else if dictionary[-1] is greater than 1 and dictionary[1] is zero, print 'no'
+	        elif d[-1]>1 and d[1]==0:
+	            print('no')
+	        # otherwise print 'yes'
+	        else: 
+	            print('yes')
