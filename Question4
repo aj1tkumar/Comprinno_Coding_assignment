@@ -10,6 +10,7 @@
   if i != "cookie" set c = 0
   if c==2 i.e. bear eaten two cookies continuously, break loop and print "no"
   if after completing for loop , value of c ==0 then print "yes" else "no"
+6. Goto next test case
 
 
 
